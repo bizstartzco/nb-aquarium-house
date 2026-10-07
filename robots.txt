@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /cart/
+Disallow: /checkout/
+
+Sitemap: https://www.nbaquariumhouse.com/sitemap.xml
