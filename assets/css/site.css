@@ -790,3 +790,40 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
 .tabs::-webkit-scrollbar { display: none; }
 .tabs__btn { flex: none; white-space: nowrap; }
 @media (max-width: 520px) { .tabs__btn { padding: .65rem 1rem; } .hero__chip { font-size: .72rem; } }
+
+/* ------------------------------------------------------- mobile polish --- */
+/* Nothing readable under 12px; small caps labels sit at 12px or above. */
+.eyebrow { font-size: .76rem; }
+.foot__head { font-size: .76rem; }
+.badge { font-size: .7rem; }
+.price__from { font-size: .8rem; }
+.table th { font-size: .76rem; }
+.logo__sub { font-size: .66rem; letter-spacing: .22em; }
+@media (max-width: 520px) { .hero__chip { font-size: .76rem; } .logo__sub { font-size: .68rem; letter-spacing: .18em; } }
+
+/* Comfortable tap targets (24px minimum, most at 40px+). */
+.demo button { width: 40px; height: 40px; flex: none; display: grid; place-items: center; }
+.crumbs a { display: inline-block; padding-block: .45rem; }
+.crumbs ol { padding-block: .5rem; }
+.card__title a { display: inline-block; padding-block: .2rem; }
+.toggle input { width: 40px; height: 24px; }
+.toggle input::after { width: 20px; height: 20px; }
+.toggle input:checked::after { transform: translateX(16px); }
+.check input, .choice input { width: 20px; height: 20px; flex: none; }
+.arrow { padding-block: .3rem; }
+.foot__col a, .foot__base a { display: inline-block; padding-block: .2rem; }
+.mobile-nav__list li a { padding-block: .85rem; }
+.badge { font-size: .75rem; }
+.hero__chip b { font-size: .75rem; }
+.crumbs ol { align-items: center; }
+
+/* Narrow-phone fixes (360px). */
+.logo__name, .logo__sub { white-space: nowrap; }
+@media (max-width: 400px) { .logo__name { font-size: 1.3rem; } .logo__sub { letter-spacing: .14em; } .logo { gap: .45rem; } .logo__mark { width: 26px; height: 26px; } }
+.hero__chip b { white-space: nowrap; flex: none; }
+/* One close button in search: hide the browser's own, centre ours on the field. */
+input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+.search__panel .wrap { position: relative; }
+.search__close { top: .9rem; right: 0; width: 40px; height: 40px; display: grid; place-items: center; }
+/* Tab strips that scroll sideways fade at the edge so the overflow reads as scrollable. */
+@media (max-width: 600px) { .tabs-head .tabs { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); } }
