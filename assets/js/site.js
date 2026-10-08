@@ -601,7 +601,7 @@
     if (reduced) return;
     var cart = document.querySelector('[data-cart-open]');
     if (!cart) return;
-    var scope = trigger.closest('.card') || trigger.closest('.product') || document;
+    var scope = trigger.closest('.card') || trigger.closest('.nbc-prod') || trigger.closest('.product') || document;
     var source = scope.querySelector('img');
     if (!source) return;
     var from = source.getBoundingClientRect();
