@@ -827,3 +827,5 @@ input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; d
 .search__close { top: .9rem; right: 0; width: 40px; height: 40px; display: grid; place-items: center; }
 /* Tab strips that scroll sideways fade at the edge so the overflow reads as scrollable. */
 @media (max-width: 600px) { .tabs-head .tabs { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); } }
+.notfound .btn + .btn { margin-left: 0; }
+.notfound .btn { margin: .3rem; }
